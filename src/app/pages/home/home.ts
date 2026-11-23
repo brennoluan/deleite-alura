@@ -1,7 +1,7 @@
-import { Component, computed, effect, signal } from '@angular/core';
-import { products, } from '../../data/products';
+import { Component, computed, effect, inject, signal } from '@angular/core';
 import { ProductCategory } from '../../components/product-category/product-category';
 import { CurrencyPipe } from '@angular/common';
+import { Products } from '../../services/products';
 
 @Component({
   selector: 'app-home',
@@ -10,7 +10,8 @@ import { CurrencyPipe } from '@angular/common';
   styleUrl: './home.css',
 })
 export class Home {
-  categories = products;
+  private productsService = inject(Products);
+  categories = this.productsService.getCategories();
 
   cartItens = signal(0);
 
