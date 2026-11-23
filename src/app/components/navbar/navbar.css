@@ -1,0 +1,46 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+.navbar {
+  background-color: #3b51a4;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  padding: 0 60px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo img {
+  height: 20%;
+  display: block;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.nav-actions {
+  display: flex;
+  gap: 20px;
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+  padding: 5px;
+}
+
+.icon-placeholder {
+  font-size: 1.5rem;
+}
