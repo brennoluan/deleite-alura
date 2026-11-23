@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 import type { Product } from '../../interfaces/product';
 import { ProductCard } from '../product-card/product-card';
 
@@ -11,4 +11,9 @@ import { ProductCard } from '../product-card/product-card';
 export class ProductCategory {
   categoryTitle = input.required<string>()
   products = input.required<Product[]>()
+  addProduct = output<void>()
+
+  onAddProduct() {
+    this.addProduct.emit()
+  }
 }

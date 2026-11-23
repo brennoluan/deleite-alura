@@ -2,7 +2,10 @@
   <h2 class="section-title">{{ categoryTitle() }}</h2>
   <div class="grid">
     @for (product of products(); track product.id) {
-      <app-product-card [product]="product"></app-product-card>
+      <app-product-card
+        [product]="product"
+        (addProduct)="onAddProduct()"
+      ></app-product-card>
     }
   </div>
 </section>
