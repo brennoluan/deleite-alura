@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ProductCard } from '../../components/product-card/product-card';
 import { Product } from '../../interfaces/product';
+import { products, icecreams, smoothies, iceCoffee } from '../../data/products';
 
 @Component({
   selector: 'app-home',
@@ -9,31 +10,9 @@ import { Product } from '../../interfaces/product';
   styleUrl: './home.css',
 })
 export class Home {
-  milkshakeAmora: Product = {
-    id: 1,
-    title: 'Milkshake de Amora',
-    price: 18.0,
-    image: 'assets/images/milkshakes/milkshake-amora.png'
-  };
+  milkshakes: Product[] = products;
+  icecreams: Product[] = icecreams;
+  smoothies: Product[] = smoothies;
+  iceCoffee: Product[] = iceCoffee;
 
-  milkshakeMaracuja: Product = {
-    id: 2,
-    title: 'Milkshake de Maracujá',
-    price: 18.0,
-    image: 'assets/images/milkshakes/milkshake-maracuja.png'
-  };
-
-  milkshakeMorango: Product = {
-    id: 3,
-    title: 'Milkshake de Morango',
-    price: 18.0,
-    image: 'assets/images/milkshakes/milkshake-morango.png'
-  };
-
-  milkshakeVerde: Product = {
-    id: 4,
-    title: 'Milkshake Verde',
-    price: 18.0,
-    image: 'assets/images/milkshakes/milkshake-verde.png'
-  };
 }
